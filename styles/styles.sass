@@ -14,48 +14,60 @@ body
         color: #FFFFFF
         letter-spacing: 0
 
-.dark-mode
-    background-color: black
-    color: white
-
-.buscarSpan
-    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%)
-
 button
     background: #F7C9F3
     border: 1px solid #110038
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 
     padding: 0.5% 1.8% 0.5% 1.8%
 
-/* Dropdown Button */
-.dropbtn 
-    border: none
-    cursor: pointer
+/*.dark-mode
+    background-color: black
+    color: white*/
 
+.buscarSpan
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%)
 
+.misGuifOs
+    font-size: 16px
+    color: #110038
+    letter-spacing: 0
+    line-height: 18px
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown 
+.misGuifOs:hover
+    border: 1px solid #110038
+
+.misGuifOs:active
+    font-size: 16px
+    color: #110038
+    letter-spacing: 0
+    line-height: 18px
+
+// HEAD
+
+.head
+    display: flex
+    justify-content: space-between
+
+.paLaDer
+    display: flex
+    justify-content: flex-end
+    div
+        margin-left: 5px
+// DROPDOWN MENU
+
+.dropdown
     position: relative
-    display: inline-block
+    display: flex 
+    background: #F7C9F3
+    border: 1px solid #110038
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 
+    padding: 0.5% 1.8% 0.5% 1.8%
 
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content 
+.dropdown-content
     display: none
     position: absolute
-    min-width: 160px
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
     z-index: 1
+    padding: 0.5% 1.8% 0.5% 1.8%
 
-
-/* Links inside the dropdown */
-.dropdown-content a 
-    color: black
-    padding: 12px 16px
-    text-decoration: none
+.show
     display: block
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show 
-    display:block

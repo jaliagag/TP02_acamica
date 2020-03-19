@@ -10,20 +10,28 @@
     <div class="movingTrain">
         <span>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</span>
     </div>
-    <div>
-        <img src="assets/gifOF_logo.png" alt="logo_main">
-        <button>Crear Guifos</button>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Elegir tema</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
+    <div class="head">
+        <div class="gifOF_logo">
+            <img src="assets/gifOF_logo.png" alt="logo_main">
+        </div>
+        <div class="paLaDer">
+            <div>
+                <button>Crear Guifos</button>
             </div>
-        </div> 
-        
-        <button onclick="modoOscuro()">Modo oscuro</button>
+            <div class="dropdown">
+                <div class="dropBtn">Elegir tema</div>
+                <div id="clkDropdown" class="dropdown-content">
+                    <button onclick="modoDia()">Sailor Day</button>
+                    <button onclick="modoOscuro()">Sailor Night</button>
+                </div>
+                <div onclick="dropdownFunc()"><img src="assets/dropdown.svg"></div>
+            </div>
+            <div>
+                <a href="#" class="misGuifOs">Mis Guifos</a>
+            </div>
+        </div>   
     </div>
-    <br>
+    
     
     <!--
         BUSCADOR
