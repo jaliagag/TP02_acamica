@@ -4,51 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <title>Document</title>
+    <title>GifOS Aliaga</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:bold&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="movingTrain">
         <span>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</span>
     </div>
-    <div class="head">
-        <div class="gifOF_logo">
-            <img src="assets/gifOF_logo.png" alt="logo_main">
-        </div>
-        <div class="paLaDer">
-            <div>
-                <button>Crear Guifos</button>
+
+    <div class="withinBody">
+        <div id="primerElemento">
+            <div class="gifOF_logo">
+                <img src="assets/gifOF_logo.png" alt="logo_main">
             </div>
-            <div class="dropdown">
-                <div class="dropBtn">Elegir tema</div>
-                <div id="clkDropdown" class="dropdown-content">
-                    <button onclick="modoDia()">Sailor Day</button>
-                    <button onclick="modoOscuro()">Sailor Night</button>
+            <div id="paLaDer">
+                <div>
+                    <button id="crearGifos">Crear Guifos</button>
                 </div>
-                <div onclick="dropdownFunc()"><img src="assets/dropdown.svg"></div>
+                <div class="dropdown" id="conMargLeft">
+                    <button onclick="dropdownFunc()" class="dropBtn">Elegir tema</button>
+                    <div id="clkDropdown" class="dropdown-content">
+                        <button onclick="modoDia()">Sailor Day</button>
+                        <button onclick="modoOscuro()">Sailor Night</button>
+                    </div>
+                        <button onclick="dropdownFunc()" class="dropBtn" id="imgDropBtn"><img src="assets/dropdown.svg"></button>
+                    </div>
+                <div id="conMargLeft">
+                    <a href="misguifos/index.html" class="misGuifOs" >Mis Guifos</a>
+                </div>
             </div>
-            <div>
-                <a href="#" class="misGuifOs">Mis Guifos</a>
-            </div>
-        </div>   
-    </div>
-    
-    
-    <!--
-        BUSCADOR
-    -->
-    <div>
-        <div class="buscarSpan">
-            <span>Buscar</span>
         </div>
+
+        <!--
+            BUSCADOR
+        -->
+        <div>
+            <div class="buscarSpan">
+                <span>Buscar</span>
+            </div>
+        </div>
+
         <div class="buscador">
+            <input type="search" placeholder=" Busca gifs, hastags, temas, busca lo que quieras" id="cuadroBusqueda">
+            <div id="bordeBuscar">
+                <button id="btnBuscar"><img src="assets/lupa.svg"> <span>Buscar</span></button>
+            </div>
 
         </div>
+        <!--
+            SUGERENCIAS
+        -->
+        <div class="sugerencias">
+            <span>Hoy te sugerimos</span>
+        </div>
+
+        <!--
+            TENDENCIAS
+        -->
+
+        <div class="tendencias">
+            <span>Tendencias</span>
+        </div>
     </div>
-    
-    
-    
-    
-    
+
+
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>
