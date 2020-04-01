@@ -1,28 +1,26 @@
-// DROPDOWN FUNCTION
 
-function dropdownFunc(){
-    document.getElementById("clkDropdown").classList.toggle("show");
+function elegirTema(nombreTema) {
+    localStorage.setItem('theme', nombreTema);
+    document.documentElement.className = nombreTema;
 }
 
-window.onclick = function(event){
-    if (!event.target.matches('.dropBtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++){
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
         }
+      }
     }
-}
-
-// DROPDOWN FUNCTION
-
-
-
-/*function modoOscuro() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
- }
-*/
+  }
+  

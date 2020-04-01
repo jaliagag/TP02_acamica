@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <title>GifOS Aliaga</title>
-    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:bold&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="movingTrain">
@@ -14,24 +14,26 @@
 
     <div class="withinBody">
         <div id="primerElemento">
-            <div class="gifOF_logo">
-                <img src="assets/gifOF_logo.png" alt="logo_main">
-            </div>
-            <div id="paLaDer">
-                <div>
-                    <button id="crearGifos">Crear Guifos</button>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/gifOF_logo.png" alt="logo_main" id="logo_dia"></a>
+                    <a href="index.html"><img src="assets/gifOF_logo_dark.png" alt="logo_main" id="logo_noche"></a>
                 </div>
-                <div class="dropdown" id="conMargLeft">
-                    <button onclick="dropdownFunc()" class="dropBtn">Elegir tema</button>
-                    <div id="clkDropdown" class="dropdown-content">
-                        <button onclick="modoDia()">Sailor Day</button>
-                        <button onclick="modoOscuro()">Sailor Night</button>
-                    </div>
-                        <button onclick="dropdownFunc()" class="dropBtn" id="imgDropBtn"><img src="assets/dropdown.svg"></button>
-                    </div>
-                <div id="conMargLeft">
-                    <a href="misguifos/index.html" class="misGuifOs" >Mis Guifos</a>
-                </div>
+                <nav>
+                    <ul>
+                        <li><a id="create" class="btn" href="crear.html"><span class="border">Crear Guifos</span></a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">Elegir tema</button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a id="tema_dia" class="option" href="#light">Sailor Day</a>
+                                    <a id="tema_noche" class="option" href="#dark">Sailor Night</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="misguifos.html" class="misGuizzmos">Mis Guifos</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
@@ -55,7 +57,9 @@
             SUGERENCIAS
         -->
         <div class="sugerencias">
-            <span>Hoy te sugerimos</span>
+            <div class="sugText">
+                <span> Hoy te sugerimos:</span>
+            </div>
         </div>
 
         <!--
@@ -63,11 +67,23 @@
         -->
 
         <div class="tendencias">
-            <span>Tendencias</span>
+            <span class="tendText">Tendencias:</span>
         </div>
     </div>
 
+    <script>
+        function elegirTema(nombreTema) {
+            document.documentElement.className = nombreTema;
+        }
 
+        document.getElementById("tema_dia").addEventListener('click', function(){
+            elegirTema('tema-dia');
+        }, false);
+
+        document.getElementById("tema_noche").addEventListener('click', function(){
+            elegirTema('tema-noche');
+        }, false);
+    </script>
     <script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
 body
     width: 100%
-    background-color: white
+    background-color:  #FDF4FC
     color: black
     margin: auto
-    font-family: 'Chakra Petch-Regular', sans-serif
+    font-family: 'Chakra Petch', sans-serif
+    font-size: 16px
+    color: #110038
 
 .withinBody
     max-width: 1200px
@@ -15,56 +17,139 @@ body
     max-width: 1438px
     margin: auto
     span
-        font-family: 'Chakra Petch-Regular', sans-serif
+        font-family: 'Chakra Petch', sans-serif
         font-size: 12px
         color: #FFFFFF
         letter-spacing: 0
 
-#primerElemento
-    margin-top: 2%
-    margin-bottom: 10px
+.wrapper
     display: flex
     justify-content: space-between
-    align-items: center
+    padding-top: 15px
+    nav ul
+        display: flex
+    nav ul li
+        list-style-type: none
+        margin-left: 15px
+//DÍA Y NOCHE
 
-#paLaDer
-    display: flex
-    margin-top: 1%
-    
+#logo_noche
+    display: none
 
-#crearGifos
+.tema-dia body
+    background-color: #FDF4FC
+    font-family: "Chakra Petch", sans-serif
+    font-size: 16px
+    color: #110038
+    letter-spacing: 0
+
+.tema-dia #logo_noche
+    display: none
+
+.tema-noche body
+    background-color: #110038
+    font-family: "Chakra Petch", sans-serif
+    font-size: 16px
+    color: #FFFFFF
+    letter-spacing: 0
+
+.tema-noche #logo_noche
+    display: block
+
+.tema-noche #logo_dia
+    display: none
+
+
+//DÍA Y NOCHE
+
+//BOTÓN CREAR GUIFOS
+.btn
     width: 144px
     height: 36px
     background: #F7C9F3
     border: 1px solid #110038
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    color: inherit
 
-#conMargLeft
-    margin-left: 10px
+.btn:hover
+    background: #E6BBE2
+    border: 1px solid #110038
+    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF
+//BOTÓN CREAR GUIFOS
 
-.dropBtn
-    width: 131px
+//BOTÓN ELEGIR TEMA
+.dropbtn
+    width: 167px
     height: 36px
     background: #F7C9F3
     border: 1px solid #110038
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF
+    font-size: 16px
+    letter-spacing: 0
+    line-height: 18px
 
-#imgDropBtn
-    width: 36px
-    height: 36px
-    background: #F7C9F3
+.dropbtn:hover
+    background: #E6BBE2
     border: 1px solid #110038
     box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF
-    margin-left: -10px
+
+.dropdown
+    position: relative
+    display: inline-block
 
 .dropdown-content
-    position: absolute
     display: none
+    position: absolute
+    background: #E6E6E6
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF
     z-index: 1
+    width: 170px
+    height: 122px
+    a
+        width: 150px
+        height: 36px
+        color: #110038
+        text-decoration: none
+        display: block
+        text-align: center
+        background: #F0F0F0
+        border: 1px solid #808080
+        box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF
+        margin-bottom: 5px
+        margin-left: 10px
+        margin-top: 7px
+    a:first-letter
+        text-decoration: underline
+    a:hover
+        background: #FFF4FD
+        border: 1px solid #CCA6C9
+        box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF
 
-  
-// BUSCAR
+.option
+    padding-top: 10px
 
+.show
+    display: block
+//BOTÓN ELEGIR TEMA
+
+//BOTÓN IR MIS GUIFOS
+.misGuizzmos
+    text-decoration: none
+    width: 95px
+    height: 32px
+    padding: 3px
+    color: inherit
+.misGuizzmos:hover
+    border: 1px dotted #110038
+.misGuizzmos:active, .misGuizzmos:focus
+    color: #110038
+//BOTÓN IR MIS GUIFOS
+
+//BUSCAR
 .buscarSpan
     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%)
     font-family: 'Chakra Petch-Bold', sans-serif
@@ -78,14 +163,15 @@ body
     background-color: #B4B4B4
     display: flex
     align-items: center
-    font-family: 'Chakra Petch-Regular', sans-serif
+    font-family: 'Chakra Petch', sans-serif
     margin-bottom: 3.9%
 
 #cuadroBusqueda
+    z-index: 0
     width: 1057px
     height: 48px
     margin-left: 5px
-    font-family: 'Chakra Petch-Regular', sans-serif
+    font-family: 'Chakra Petch', sans-serif
 
 #bordeBuscar
     width: 102px
@@ -94,16 +180,54 @@ body
     justify-content: space-between
     align-items: center
     margin-left: 10px
-    
+
 #btnBuscar
     background: #E6E6E6
     border: 1px solid #808080
     box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF
     padding: 10px
-    font-family: 'ChakraPetch-Regular', sans-serif
+    font-family: 'ChakraPetch', sans-serif
     font-size: 16px
-    color: #B4B4B4
+    color: #110038
     letter-spacing: 0
     line-height: 18px
+    background-color: #F7C9F3
     span
         margin-left: 7px
+
+.sugerencias
+    margin-top: 64px
+
+.sugText
+    width: 1200px
+    height: 32px
+    background: #FFFAFE
+    border: 1px solid #E6BBE2
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D
+    display: flex
+    align-items: center
+    span
+        padding-left: 5px
+        font-family: 'ChakraPetch', sans-serif
+        font-size: 14px
+        color: #110038
+        letter-spacing: 0
+
+.tendencias
+    margin-top: 400px
+
+.tendText
+    width: 1200px
+    height: 32px
+    background: #FFFAFE
+    border: 1px solid #E6BBE2
+    box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D
+    display: flex
+    align-items: center
+    span
+        padding-left: 5px
+        font-family: 'ChakraPetch', sans-serif
+        font-size: 14px
+        color: #110038
+        letter-spacing: 0
+//BUSCAR
