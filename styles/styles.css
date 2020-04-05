@@ -129,6 +129,7 @@ body {
   display: block; }
 
 .misGuizzmos {
+  display: inline;
   text-decoration: none;
   width: 95px;
   height: 32px;
@@ -140,6 +141,9 @@ body {
 
 .misGuizzmos:active, .misGuizzmos:focus {
   color: #110038; }
+
+.misGuizzmos:first-letter {
+  text-decoration: underline; }
 
 .buscarSpan {
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
